@@ -15,6 +15,7 @@ import { useState, useEffect } from 'react';
 import { useAutenticacao } from './hooks/useAutenticacao';
 import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Search from './pages/Search/Search';
 function App() {
   // Lógica sobre como nos vamos monitorar o estado do usuário
   // Aqui englobamos  todos os componentes e páginas
@@ -44,6 +45,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
+              <Route path='/search' element={<Search />} />
               <Route path='/login' element={ !user ? <Login/> : <Navigate to="/" />} />
               <Route path='/register' element={ !user ? <Register/> : <Navigate to="/" />} />
               <Route path='/posts/create' element={ user ? <CreatePost/> : <Navigate to="/login" />} />

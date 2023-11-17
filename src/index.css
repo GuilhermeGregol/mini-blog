@@ -105,3 +105,12 @@ button[disabled] {
   padding: 5px;
   border-radius: 5px;
 }
+
+.botao.botao-outline {
+  background-color: #000;
+  color: #aaa;
+}
+
+.botao.botao-danger:hover {
+  background-color: #dc3545;
+}
